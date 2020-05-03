@@ -1,0 +1,31 @@
+# Docker HealScript
+
+This is a Docker image that runs a script whenever a specific container becomes unhealthy.
+It maps to scripts in the `/scripts` directory and if an image *X* is found to be unhealth, it will run `/scripts/X.sh`
+
+## Usage
+## docker
+```sh
+docker run -it -v /path/to/scripts:/scripts docker.pkg.github.com/ericm/healscript/healscript:latest
+```
+### docker-compose
+```yml
+version: "3"
+services:
+  healscript:
+    image: docker.pkg.github.com/ericm/healscript/healscript:latest
+    volumes:
+      - /path/to/scripts:/scripts
+```
+
+## Example script
+```sh
+# /script/X.sh
+docker logs Y
+docker restart X Y Z
+```
+
+## Images
+- `docker.pkg.github.com/ericm/healscript/healscript:{latest|x86_64}`
+
+- `docker.pkg.github.com/ericm/healscript/healscript:armhf`
