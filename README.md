@@ -6,7 +6,10 @@ It maps to scripts in the `/scripts` directory and if an image *X* is found to b
 ## Usage
 ## docker
 ```sh
-docker run -it -v /path/to/scripts:/scripts docker.pkg.github.com/ericm/healscript/healscript:latest
+docker run -it \
+-v /path/to/scripts:/scripts \
+-v /var/run/docker.sock:/var/run/docker.sock \
+docker.pkg.github.com/ericm/healscript/healscript:latest
 ```
 ### docker-compose
 ```yml
@@ -16,6 +19,7 @@ services:
     image: docker.pkg.github.com/ericm/healscript/healscript:latest
     volumes:
       - /path/to/scripts:/scripts
+      - /var/run/docker.sock:/var/run/docker.sock
 ```
 
 ## Example script
