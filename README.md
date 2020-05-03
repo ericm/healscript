@@ -1,7 +1,7 @@
 # Docker HealScript
 
 This is a Docker image that runs a script whenever a specific container becomes unhealthy.
-It maps to scripts in the `/scripts` directory and if an image *X* is found to be unhealth, it will run `/scripts/X.sh`
+It maps to scripts in the `/scripts` directory and if an image *X* is found to be unhealthy, it will run `/scripts/X.sh`
 
 ## Usage
 ## docker
