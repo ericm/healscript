@@ -20,7 +20,7 @@ moynihan/healscript:latest
 version: "3"
 services:
   healscript:
-    image: docker.pkg.github.com/ericm/healscript/healscript:latest
+    image: moynihan/healscript:latest
     volumes:
       - /path/to/scripts:/scripts
       - /var/run/docker.sock:/var/run/docker.sock
