@@ -39,3 +39,5 @@ docker restart X Y Z
 - `moynihan/healscript:{latest|x86_64}`
 
 - `moynihan/healscript:armhf`
+
+Based off of https://github.com/willfarrell/docker-autoheal
